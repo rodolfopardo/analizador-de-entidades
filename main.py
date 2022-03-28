@@ -47,26 +47,26 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-# if "en_nlp" not in st.session_state:
-#     st.session_state.en_nlp = spacy.load("en_core_web_sm")
+if "en_nlp" not in st.session_state:
+    st.session_state.en_nlp = spacy.load("en_core_web_sm")
 
-# if "it_nlp" not in st.session_state:
-#     st.session_state.it_nlp = spacy.load("it_core_news_sm")
-
-
-# @st.cache(suppress_st_warning=True) 
-# def logo():
-# @st.cache(allow_output_mutation=True)
-# def logo():
+if "it_nlp" not in st.session_state:
+     st.session_state.it_nlp = spacy.load("it_core_news_sm")
 
 
-# # x= "anim"
-# if  'anim'  not in st.session_state:
-#     with open("data.json") as f:
-#         st.session_state.anim = json.loads(f.read())
+@st.cache(suppress_st_warning=True) 
+def logo():
+@st.cache(allow_output_mutation=True)
+def logo():
 
-#     with st.sidebar:
-#         st_lottie(st.session_state.anim, width=280, height=230, loop=False, key="anim_makoto")
+
+# x= "anim"
+if  'anim'  not in st.session_state:
+    with open("data.json") as f:
+        st.session_state.anim = json.loads(f.read())
+
+     with st.sidebar:
+         st_lottie(st.session_state.anim, width=280, height=230, loop=False, key="anim_makoto")
 # # # logo()
 
 st.markdown(
@@ -191,8 +191,8 @@ The table with the "Top entities by Frequency" takes into account for the Freque
         meta_tags_only = False
         text_input = st.text_area('Please enter a text', placeholder='Posts involving Semantic SEO at Google include structured data, schema, and knowledge graphs, with SERPs that answer questions and rank entities - Bill Slawsky.')
     is_url = utils.is_url(text_input)
-   # print('is_uri from 192 line\n', is_url)
-    # spacy_pos = st.checkbox('Process Part-of-Speech analysis with SpaCy')
+    print('is_uri from 192 line\n', is_url)
+     spacy_pos = st.checkbox('Process Part-of-Speech analysis with SpaCy')
     spacy_pos = False
     scrape_all = st.checkbox("Scrape ALL the Entities descriptions from Wikipedia. This is a time-consuming task, so grab a coffee if you need all the descriptions in your CSV file. The descriptions of the Entities you select for your 'about' and 'mentions' schema properties will be scraped and present in the corresponding JSON-LD files")
     #rint('Scrape all', scrape_all)
@@ -200,8 +200,8 @@ The table with the "Top entities by Frequency" takes into account for the Freque
         extract_categories_topics = st.checkbox('Extract Categories and Topics')
     submitted = st.form_submit_button("Submit")
     if submitted:
-#         loti_path = load_lottifile('lotti/seo2.json')
-# #st.titl
+         loti_path = load_lottifile('lotti/seo2.json')
+ #st.titl
 #         st_lottie(loti_path, width=280, height=130, loop=True)
 
         if not text_razor_key and not google_api:
