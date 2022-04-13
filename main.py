@@ -102,7 +102,8 @@ with st.form("my_form"):
     )
     
     st.sidebar.info('##### Register on the [TextRazor website](https://www.textrazor.com/) to obtain a free API keyword (🙌 500 calls/day 🙌) or activate the [NLP API](https://cloud.google.com/natural-language) inside your Google Cloud Console, and export the JSON authentication file.') 
-    st.sidebar.info('##### Knowledge Graph Entity ID is extracted only using the Google NLP API.') 
+    st.sidebar.info('##### Knowledge Graph Entity ID is extracted only using the Google NLP API.')
+    st.sidebar.info('##### Read this article to [learn more about how to use The Entities Swissknife](https://studiomakoto.it/digital-marketing/entity-seo-semantic-publishing/.') 
     st.sidebar.info('##### Categories and Topics - by [IPTC Media Topics](https://iptc.org/standards/media-topics/) - are avalaible only using the TextRazor API.') 
    
     # loti_path = load_lottifile('lotti/seo.json')
@@ -132,7 +133,7 @@ This app, devoted to ✍️[Semantic Publishing](https://en.wikipedia.org/wiki/S
 The Entities Swissknife (TES) is a 100% 🐍Python🐍 app for Semantic publishing, i.e., publishing information on the web as documents accompanied by semantic markup (using the [schema.org](https://schema.org) vocabulary in JSON-LD format). Semantic publication provides a way for machines to understand the structure and meaning of the published information, making information search and data integration more efficient.
 Semantic publishing relies on Structured Data adoption and Entity Linking (Wikification). Named entities are then injected into the JSON-LD markup to make the Content Topics explicit and 🥰Search engines friendly🥰: declare the main topic with the '[about](https://schema.org/about)' property and the secondary topics with the '[mentions](https://schema.org/mentions)' property).
 The 'about' property should refer to 1-2 entities/topics at most, and these entities should be present in your H1 title. The 'mentions' properties should be no more than 3-5 depending on the article's length; as a general rule, an entities/topics should be explicitly mentioned in your schema markup if there is at least one paragraph dedicated to them (and they are possibly present in the relative headline).
-The table with the "Top entities by Frequency" takes into account for the Frequency count also the normalized entities and not only the exact word with which the entities are present in the text.
+The table with the "Top Entities by Frequency" takes into account for the Frequency count also the normalized entities and not only the exact word with which the entities are present in the text.
             
             """
         )
@@ -145,7 +146,6 @@ The table with the "Top entities by Frequency" takes into account for the Freque
 -   Analyze your SERP competitor’s main topics to discover possible topical gaps in your content;
 -   Generate the JSON-LD markup (and inject it into your page schema) to explicit which topics your page is about to search engines. Declare your main topic with the 'about' property. Use the 'mentions' property to declare your secondary topics. This is helpful for disambiguation purposes too;
 -   Analyze short texts such as a copy for an ad or a bio/description for an About-page (i.e., the [Entity Home](https://kalicube.com/faq/brand-serps/entity-home-in-seo-explainer/)).
--   Fine-tune the text until Google correctly recognizes the relevant entities and gives them desired salience. Use the SpaCy Part-of-Speech module to check how algorithms understand dependencies. Simplify the structure of the sentence if it is machines unfriendly.
            """
         )
 
