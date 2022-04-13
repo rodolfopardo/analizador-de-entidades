@@ -101,9 +101,9 @@ with st.form("my_form"):
         ("URL", "Text")
     )
     
+    st.sidebar.info('##### Read this article to [learn more about how to use The Entities Swissknife](https://studiomakoto.it/digital-marketing/entity-seo-semantic-publishing/).')
     st.sidebar.info('##### Register on the [TextRazor website](https://www.textrazor.com/) to obtain a free API keyword (🙌 500 calls/day 🙌) or activate the [NLP API](https://cloud.google.com/natural-language) inside your Google Cloud Console, and export the JSON authentication file.') 
     st.sidebar.info('##### Knowledge Graph Entity ID is extracted only using the Google NLP API.')
-    st.sidebar.info('##### Read this article to [learn more about how to use The Entities Swissknife](https://studiomakoto.it/digital-marketing/entity-seo-semantic-publishing/.') 
     st.sidebar.info('##### Categories and Topics - by [IPTC Media Topics](https://iptc.org/standards/media-topics/) - are avalaible only using the TextRazor API.') 
    
     # loti_path = load_lottifile('lotti/seo.json')
@@ -120,7 +120,6 @@ This app, devoted to ✍️[Semantic Publishing](https://en.wikipedia.org/wiki/S
 -   [Text Razor API](https://www.textrazor.com/) for Named-Entity Recognition ([NER](https://en.wikipedia.org/wiki/Named-entity_recognition)) and Linking ([NEL](https://en.wikipedia.org/wiki/Entity_linking));
 -   [Google NLP API](https://cloud.google.com/natural-language) for NER and NEL;
 -   Wikipedia API for scraping entities description;
--   [SpaCy for Streamlit](https://spacy.io/universe/project/spacy-streamlit) for Part-of-Speech Recognition
 -   For everything else, the beauty and power of 🐍Python🐍 and Steamlit.
             
             """
